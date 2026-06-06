@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Supabase</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 min-h-screen font-sans">
+
+    <div class="max-w-4xl mx-auto p-6">
+        <header class="mb-10 text-center">
+            <h1 class="text-4xl font-extrabold text-indigo-600 tracking-tight">Lista Artykułów</h1>
+            <p class="text-gray-500 mt-2">Projekt Supabase</p>
+        </header>
+
+        <main id="articles-container" class="space-y-6 mb-12">
+            <div class="text-center py-4 text-gray-500">Ładowanie artykułów...</div>
+        </main>
+
+        <hr class="border-gray-300 my-8">
+
+        <section class="bg-white p-8 rounded-xl shadow-md">
+            <h2 class="text-2xl font-bold mb-6 text-gray-900 border-b pb-2">Dodaj nowy artykuł</h2>
+            
+            <form id="add-article-form" class="space-y-4">
+                <div>
+                    <label for="title" class="block text-sm font-medium text-gray-700">Tytuł</label>
+                    <input type="text" id="title" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+
+                <div>
+                    <label for="subtitle" class="block text-sm font-medium text-gray-700">Podtytuł</label>
+                    <input type="text" id="subtitle" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+
+                <div>
+                    <label for="author" class="block text-sm font-medium text-gray-700">Autor</label>
+                    <input type="text" id="author" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+
+                <div>
+                    <label for="content" class="block text-sm font-medium text-gray-700">Treść</label>
+                    <textarea id="content" rows="5" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-md transition duration-150 ease-in-out cursor-pointer shadow">
+                    Opublikuj artykuł
+                </button>
+            </form>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
