@@ -1,4 +1,4 @@
-const SUPABASE_URL = "https://ngkgwyckidajllsjtvgt.supabase.co/rest/v1/"; 
+const SUPABASE_URL = "https://ngkgwyckidajllsjtvgt.supabase.co"; 
 const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5na2d3eWNraWRhamxsc2p0dmd0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk2MjUwMjEsImV4cCI6MjA5NTIwMTAyMX0.jP8ohZ79-m0mjHlzKHkMRURtOrThINLWKHLY2_82aNQ"; 
 
 const API_URL = `${SUPABASE_URL}/rest/v1/articles`;
