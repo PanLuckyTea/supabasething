@@ -1,7 +1,8 @@
 const SUPABASE_URL = "https://ngkgwyckidajllsjtvgt.supabase.co"; 
 const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5na2d3eWNraWRhamxsc2p0dmd0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk2MjUwMjEsImV4cCI6MjA5NTIwMTAyMX0.jP8ohZ79-m0mjHlzKHkMRURtOrThINLWKHLY2_82aNQ"; 
 
-const API_URL = `${SUPABASE_URL}/rest/v1/articles`;
+// Poprawiona nazwa tabeli na pojedynczą: "article"
+const API_URL = `${SUPABASE_URL}/rest/v1/article`;
 
 const headers = {
     "apikey": SUPABASE_KEY,
@@ -15,7 +16,6 @@ const addForm = document.getElementById('add-article-form');
 
 async function fetchArticles() {
     try {
-
         const response = await fetch(`${API_URL}?order=created_at.desc`, {
             method: 'GET',
             headers: headers
@@ -38,7 +38,6 @@ function renderArticles(articles) {
     }
 
     articlesContainer.innerHTML = articles.map(article => {
-
         const date = new Date(article.created_at).toLocaleDateString('pl-PL', {
             year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit'
         });
